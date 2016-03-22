@@ -1,0 +1,15 @@
+$ bison -d -y calc2.y
+$ flex calc2.l
+$ gcc -c y.tab.c lex.yy.c 
+$ gcc y.tab.o lex.yy.o -o calc2.exe
+$ ./calc2.exe
+23+27
+23 -> INTEGER -> expression
++ -> 
+27 -> INTEGER -> expression
+
+expression + expression -> expression
+expression -> statement 
+result = 50
+^D
+
